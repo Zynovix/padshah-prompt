@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-label="پادشاه پرامپت">
+  <defs>
+    <radialGradient id="bg" cx=".35" cy=".25" r=".9">
+      <stop offset="0" stop-color="#173E66"/>
+      <stop offset="1" stop-color="#06101E"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="250" y1="180" x2="930" y2="990">
+      <stop offset="0" stop-color="#FFE59A"/>
+      <stop offset=".48" stop-color="#F4C542"/>
+      <stop offset="1" stop-color="#D99B18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="250" fill="url(#bg)"/>
+  <circle cx="600" cy="600" r="460" fill="none" stroke="url(#gold)" stroke-width="28"/>
+  <path d="M350 430V290l100 70 150-205 150 205 100-70v140H350Z" fill="url(#gold)"/>
+  <rect x="370" y="410" width="460" height="70" rx="22" fill="url(#gold)"/>
+  <path d="M360 540c0-36 30-66 66-66h348c36 0 66 30 66 66v198c0 36-30 66-66 66H566L430 930V804h-4c-36 0-66-30-66-66V540Z" fill="url(#gold)"/>
+  <path d="M500 600h140c55 0 90 28 90 69s-35 69-90 69h-72v50" fill="none" stroke="#071321" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M568 600v188" fill="none" stroke="#071321" stroke-width="34" stroke-linecap="round"/>
+</svg>
