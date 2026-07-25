@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css');
 :root {
             --gold: #7DE8FF;
             --gold-dark: #7C5CFC;
@@ -467,7 +467,7 @@ html, body { min-height: 100%; }
 
 /* Only Hero Main Title */
 .hero h1{
-    font-family: "Lalezar", "Vazirmatn", Tahoma, sans-serif !important;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-family:"Shabnam","Vazirmatn",Tahoma,sans-serif !important;
+    font-weight:700;
+    letter-spacing:-0.02em;
 }
