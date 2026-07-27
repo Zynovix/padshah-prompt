@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="پرامپت چیست، یک پرامپت حرفه‌ای چه اجزایی دارد و چگونه برای ChatGPT و ابزارهای هوش مصنوعی دستور دقیق بنویسیم؟">
+  <meta name="keywords" content="پرامپت چیست, پرامپت نویسی, آموزش ChatGPT, هوش مصنوعی">
+  <meta name="author" content="پادشاه پرامپت">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://padshahprompt.ir/what-is-a-prompt.html">
+  <title>پرامپت چیست؟ راهنمای کامل پرامپت‌نویسی | پادشاه پرامپت</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="article.css">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="پرامپت چیست؟ راهنمای کامل پرامپت‌نویسی">
+  <meta property="og:description" content="پرامپت چیست، یک پرامپت حرفه‌ای چه اجزایی دارد و چگونه برای ChatGPT و ابزارهای هوش مصنوعی دستور دقیق بنویسیم؟">
+  <meta property="og:url" content="https://padshahprompt.ir/what-is-a-prompt.html">
+  <meta property="og:site_name" content="پادشاه پرامپت">
+  <meta property="og:image" content="https://padshahprompt.ir/social-avatar.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"پرامپت چیست؟ راهنمای کامل پرامپت‌نویسی","description":"پرامپت چیست، یک پرامپت حرفه‌ای چه اجزایی دارد و چگونه برای ChatGPT و ابزارهای هوش مصنوعی دستور دقیق بنویسیم؟","inLanguage":"fa-IR","datePublished":"2026-07-27","dateModified":"2026-07-27","mainEntityOfPage":"https://padshahprompt.ir/what-is-a-prompt.html","author":{"@type":"Organization","name":"پادشاه پرامپت","url":"https://padshahprompt.ir/"},"publisher":{"@type":"Organization","name":"پادشاه پرامپت","logo":{"@type":"ImageObject","url":"https://padshahprompt.ir/logo-original.png"}},"image":"https://padshahprompt.ir/social-avatar.svg"}</script>
+</head>
+<body>
+  <nav class="navbar" aria-label="ناوبری اصلی">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html"><img class="brand-logo-img" src="logo-original.png" alt="لوگوی پادشاه پرامپت" width="58" height="58">پادشاه پرامپت</a>
+      <div class="nav-links">
+        <a href="index.html#blog">همه مقالات</a>
+        <a href="index.html"><i class="fas fa-arrow-right"></i> خانه</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="article-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">
+        <a href="index.html">خانه</a><span>/</span><a href="index.html#blog">مقالات</a><span>/</span><span>پرامپت چیست؟ راهنمای کامل</span>
+      </nav>
+      <div class="article-icon" aria-hidden="true"><i class="fas fa-robot"></i></div>
+      <h1>پرامپت چیست؟ راهنمای کامل پرامپت‌نویسی</h1>
+      <p class="lead">پرامپت چیست، یک پرامپت حرفه‌ای چه اجزایی دارد و چگونه برای ChatGPT و ابزارهای هوش مصنوعی دستور دقیق بنویسیم؟</p>
+      <div class="article-meta">
+        <span><i class="far fa-calendar-alt"></i> به‌روزرسانی: مرداد ۱۴۰۵</span>
+        <span><i class="far fa-clock"></i> زمان مطالعه: 10 دقیقه</span>
+        <span><i class="far fa-user"></i> تحریریه پادشاه پرامپت</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-main">
+    <div class="container">
+      <div class="article-shell">
+        <nav class="toc" aria-label="فهرست مقاله">
+          <h2>در این مقاله می‌خوانید</h2>
+          <ol>
+              <li><a href="#definition">پرامپت دقیقاً چیست؟</a></li>
+              <li><a href="#anatomy">اجزای یک پرامپت حرفه‌ای</a></li>
+              <li><a href="#workflow">روش نوشتن پرامپت در ۵ مرحله</a></li>
+              <li><a href="#example">نمونه پرامپت ضعیف و نسخه بهتر</a></li>
+              <li><a href="#iteration">چرا اصلاح مرحله‌ای مهم است؟</a></li>
+              <li><a href="#checklist">چک‌لیست نهایی</a></li>
+          </ol>
+        </nav>
+
+        <article class="article-body">
+          <section aria-labelledby="definition"><h2 id="definition">پرامپت دقیقاً چیست؟</h2>
+          <p>پرامپت ورودی‌ای است که به یک مدل هوش مصنوعی می‌دهید تا بر اساس آن پاسخ تولید کند. این ورودی می‌تواند یک سؤال کوتاه، یک دستور چندمرحله‌ای، متن مرجع، تصویر یا ترکیبی از چند نوع محتوا باشد. در عمل، پرامپت همان صورت مسئله‌ای است که هدف، زمینه و شکل خروجی مورد انتظار را برای مدل روشن می‌کند.</p>
+          <p>پرامپت‌نویسی حرفه‌ای به معنی استفاده از کلمات عجیب نیست. مهم این است که درخواست مبهم را به یک وظیفه روشن تبدیل کنید. هرچه مدل بهتر بفهمد برای چه کسی، با چه هدفی و در چه قالبی باید پاسخ دهد، احتمال دریافت خروجی قابل استفاده بیشتر می‌شود.</p>
+          <div class="callout"><p><strong>نکته مهم:</strong> پاسخ مدل ممکن است نادرست یا ناقص باشد. پرامپت خوب کیفیت مسیر را بهتر می‌کند، اما جای بررسی انسانی و راستی‌آزمایی را نمی‌گیرد.</p></div></section>
+          <section aria-labelledby="anatomy"><h2 id="anatomy">اجزای یک پرامپت حرفه‌ای</h2>
+          <p>برای بیشتر کارهای روزمره، یک پرامپت خوب از پنج جزء ساخته می‌شود:</p>
+          <ol>
+            <li><strong>نقش:</strong> مشخص کنید مدل از چه زاویه‌ای پاسخ دهد؛ مثلاً ویراستار، استراتژیست محتوا یا تحلیلگر داده.</li>
+            <li><strong>وظیفه:</strong> دقیقاً بگویید چه کاری باید انجام شود؛ نوشتن، خلاصه‌سازی، مقایسه یا بازنویسی.</li>
+            <li><strong>زمینه:</strong> اطلاعات ضروری درباره محصول، مخاطب، کانال انتشار و هدف را اضافه کنید.</li>
+            <li><strong>محدودیت:</strong> طول، لحن، موارد ممنوع، زبان و سطح تخصص را تعیین کنید.</li>
+            <li><strong>قالب خروجی:</strong> جدول، فهرست، متن پیوسته، JSON یا چند گزینه مشخص درخواست کنید.</li>
+          </ol>
+          <p>همیشه لازم نیست هر پنج جزء طولانی باشند. برای کار ساده، یک جمله دقیق کافی است؛ برای کار حساس یا چندمرحله‌ای، جزئیات بیشتر ارزش دارد.</p></section>
+          <section aria-labelledby="workflow"><h2 id="workflow">روش نوشتن پرامپت در ۵ مرحله</h2>
+          <ol>
+            <li>نتیجه نهایی را در یک جمله تعریف کنید.</li>
+            <li>اطلاعاتی را که مدل برای انجام کار ندارد، به درخواست اضافه کنید.</li>
+            <li>مخاطب، لحن و کانال انتشار را مشخص کنید.</li>
+            <li>شکل خروجی و معیارهای کیفیت را تعیین کنید.</li>
+            <li>پاسخ را بررسی کنید و با یک پیام پیگیری، بخش ضعیف را اصلاح کنید.</li>
+          </ol>
+          <p>برای کارهای پیچیده بهتر است وظیفه را به چند مرحله تقسیم کنید: ابتدا ایده‌ها، سپس طرح کلی، بعد پیش‌نویس و در پایان ویرایش. این روش کنترل بیشتری روی کیفیت می‌دهد.</p></section>
+          <section aria-labelledby="example"><h2 id="example">نمونه پرامپت ضعیف و نسخه بهتر</h2>
+          <p><strong>نسخه مبهم:</strong> «برای محصول من کپشن بنویس.» این درخواست درباره محصول، مخاطب، لحن و هدف چیزی نمی‌گوید.</p>
+          <pre class="prompt-example">نقش: یک کپی‌رایتر فروشگاهی فارسی‌زبان باش.
+
+وظیفه: برای معرفی [نام محصول] یک کپشن اینستاگرام بنویس.
+
+زمینه: مخاطب ما [ویژگی مخاطب] است و مزیت اصلی محصول [مزیت] است.
+
+محدودیت: حداکثر ۱۲۰ کلمه، لحن صمیمی و بدون ادعای اغراق‌آمیز.
+
+خروجی: یک شروع جذاب، سه مزیت کوتاه و یک دعوت به اقدام طبیعی.</pre>
+          <p>متغیرهای داخل کروشه را با اطلاعات واقعی جایگزین کنید. اگر داده‌ای مثل قیمت، ویژگی یا زمان تحویل را نمی‌دانید، از مدل نخواهید آن را حدس بزند.</p></section>
+          <section aria-labelledby="iteration"><h2 id="iteration">چرا اصلاح مرحله‌ای مهم است؟</h2>
+          <p>اولین پاسخ الزاماً بهترین پاسخ نیست. خروجی را با چند معیار ساده بررسی کنید: آیا دقیق است؟ آیا با مخاطب هماهنگ است؟ آیا اطلاعات ساختگی دارد؟ آیا قالب خواسته‌شده را رعایت کرده است؟ سپس بازخورد مشخص بدهید.</p>
+          <pre class="prompt-example">نسخه قبلی را بازنویسی کن:
+۱) شروع را کوتاه‌تر کن.
+۲) ادعاهای بدون منبع را حذف کن.
+۳) مثال را برای یک فروشگاه کوچک ایرانی بومی‌سازی کن.
+۴) خروجی را در سه پاراگراف ارائه بده.</pre>
+          <div class="callout success"><p>پرامپت‌نویسی یک گفت‌وگوی تکرارشونده است: درخواست، ارزیابی، بازخورد و اصلاح.</p></div></section>
+          <section aria-labelledby="checklist"><h2 id="checklist">چک‌لیست نهایی</h2>
+          <ul>
+            <li>هدف درخواست فقط یک برداشت روشن دارد.</li>
+            <li>اطلاعات لازم و متن مرجع در اختیار مدل قرار گرفته است.</li>
+            <li>مخاطب، لحن، طول و قالب خروجی مشخص‌اند.</li>
+            <li>برای داده‌های حساس، منبع و روش راستی‌آزمایی درخواست شده است.</li>
+            <li>اطلاعات محرمانه یا شخصی در پرامپت قرار نگرفته است.</li>
+          </ul></section>
+        </article>
+
+        <aside class="sources" aria-label="منابع">
+          <h2>منابع و مطالعه بیشتر</h2>
+          <ul>
+          <li><a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt" target="_blank" rel="noopener noreferrer">بهترین روش‌های پرامپت‌نویسی برای ChatGPT ـ OpenAI</a></li>
+          <li><a href="https://help.openai.com/en/articles/4936848-how-do-i-create-a-good-prompt-for-an-ai-model" target="_blank" rel="noopener noreferrer">چگونه برای یک مدل AI پرامپت خوب بنویسیم؟ ـ OpenAI</a></li>
+          </ul>
+        </aside>
+
+        <section class="article-cta">
+          <h2>مشاهده پک تولید محتوای متنی</h2>
+          <p>اگر می‌خواهید به‌جای شروع از صفحه سفید، از ساختارهای آماده و قابل شخصی‌سازی استفاده کنید، پک تولید محتوای متنی نقطه شروع مناسبی است.</p>
+          <a class="btn" href="content-writing-pack.html"><i class="fas fa-arrow-left"></i> مشاهده پک تولید محتوای متنی</a>
+        </section>
+
+        <section class="related">
+          <h2>مقالات مرتبط</h2>
+          <div class="related-grid">
+          <a class="related-card" href="what-is-artificial-intelligence.html"><i class="fas fa-brain"></i><span>هوش مصنوعی چیست؟</span></a>
+          <a class="related-card" href="make-money-with-ai.html"><i class="fas fa-chart-line"></i><span>کسب درآمد از هوش مصنوعی</span></a>
+          <a class="related-card" href="prompt-writing-rules.html"><i class="fas fa-pen-fancy"></i><span>۱۰ قانون طلایی پرامپت‌نویسی</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="container">© ۱۴۰۵ پادشاه پرامپت | تمامی حقوق محفوظ است</div></footer>
+</body>
+</html>

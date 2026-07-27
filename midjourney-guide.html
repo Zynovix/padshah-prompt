@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="آموزش ساخت پرامپت تصویری در Midjourney، استفاده از پارامترها، تصویر مرجع، وزن‌دهی و روش اصلاح خروجی.">
+  <meta name="keywords" content="آموزش Midjourney, پرامپت میدجرنی, ساخت تصویر با AI, پارامتر Midjourney">
+  <meta name="author" content="پادشاه پرامپت">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://padshahprompt.ir/midjourney-guide.html">
+  <title>راهنمای Midjourney؛ از پرامپت تا تصویر بهتر | پادشاه پرامپت</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="article.css">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="راهنمای Midjourney؛ از پرامپت تا تصویر بهتر">
+  <meta property="og:description" content="آموزش ساخت پرامپت تصویری در Midjourney، استفاده از پارامترها، تصویر مرجع، وزن‌دهی و روش اصلاح خروجی.">
+  <meta property="og:url" content="https://padshahprompt.ir/midjourney-guide.html">
+  <meta property="og:site_name" content="پادشاه پرامپت">
+  <meta property="og:image" content="https://padshahprompt.ir/social-avatar.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"راهنمای Midjourney؛ از پرامپت تا تصویر بهتر","description":"آموزش ساخت پرامپت تصویری در Midjourney، استفاده از پارامترها، تصویر مرجع، وزن‌دهی و روش اصلاح خروجی.","inLanguage":"fa-IR","datePublished":"2026-07-27","dateModified":"2026-07-27","mainEntityOfPage":"https://padshahprompt.ir/midjourney-guide.html","author":{"@type":"Organization","name":"پادشاه پرامپت","url":"https://padshahprompt.ir/"},"publisher":{"@type":"Organization","name":"پادشاه پرامپت","logo":{"@type":"ImageObject","url":"https://padshahprompt.ir/logo-original.png"}},"image":"https://padshahprompt.ir/social-avatar.svg"}</script>
+</head>
+<body>
+  <nav class="navbar" aria-label="ناوبری اصلی">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html"><img class="brand-logo-img" src="logo-original.png" alt="لوگوی پادشاه پرامپت" width="58" height="58">پادشاه پرامپت</a>
+      <div class="nav-links">
+        <a href="index.html#blog">همه مقالات</a>
+        <a href="index.html"><i class="fas fa-arrow-right"></i> خانه</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="article-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">
+        <a href="index.html">خانه</a><span>/</span><a href="index.html#blog">مقالات</a><span>/</span><span>راهنمای کامل Midjourney</span>
+      </nav>
+      <div class="article-icon" aria-hidden="true"><i class="fas fa-image"></i></div>
+      <h1>راهنمای Midjourney؛ از پرامپت تا تصویر بهتر</h1>
+      <p class="lead">آموزش ساخت پرامپت تصویری در Midjourney، استفاده از پارامترها، تصویر مرجع، وزن‌دهی و روش اصلاح خروجی.</p>
+      <div class="article-meta">
+        <span><i class="far fa-calendar-alt"></i> به‌روزرسانی: مرداد ۱۴۰۵</span>
+        <span><i class="far fa-clock"></i> زمان مطالعه: 14 دقیقه</span>
+        <span><i class="far fa-user"></i> تحریریه پادشاه پرامپت</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-main">
+    <div class="container">
+      <div class="article-shell">
+        <nav class="toc" aria-label="فهرست مقاله">
+          <h2>در این مقاله می‌خوانید</h2>
+          <ol>
+              <li><a href="#basics">پرامپت تصویری چگونه کار می‌کند؟</a></li>
+              <li><a href="#anatomy">ساختار پیشنهادی پرامپت تصویر</a></li>
+              <li><a href="#parameters">پارامترها را کجا بنویسیم؟</a></li>
+              <li><a href="#references">استفاده از تصویر مرجع</a></li>
+              <li><a href="#iteration">روش اصلاح خروجی</a></li>
+              <li><a href="#mistakes">اشتباهات رایج</a></li>
+          </ol>
+        </nav>
+
+        <article class="article-body">
+          <section aria-labelledby="basics"><h2 id="basics">پرامپت تصویری چگونه کار می‌کند؟</h2>
+          <p>در Midjourney، پرامپت نقطه شروع خلاقانه شماست. به‌جای نوشتن دستورهای مکالمه‌ای طولانی، معمولاً توصیف روشنِ موضوع، محیط، ترکیب‌بندی، نور، رنگ و سبک نتیجه بهتری می‌دهد.</p>
+          <p>ویژگی‌ها و نسخه‌های Midjourney تغییر می‌کنند؛ بنابراین برای نام و دامنه پارامترها همیشه مستندات رسمی همان نسخه را بررسی کنید.</p></section>
+          <section aria-labelledby="anatomy"><h2 id="anatomy">ساختار پیشنهادی پرامپت تصویر</h2>
+          <ol>
+            <li><strong>سوژه:</strong> چه چیزی در تصویر است؟</li>
+            <li><strong>محیط:</strong> کجا و در چه شرایطی قرار دارد؟</li>
+            <li><strong>ترکیب‌بندی:</strong> نمای نزدیک، واید، از بالا یا زاویه مشخص.</li>
+            <li><strong>نور و رنگ:</strong> نرم، سینمایی، طلایی یا پالت محدود.</li>
+            <li><strong>رسانه و بافت:</strong> عکس، پوستر، سه‌بعدی، آبرنگ یا کلاژ.</li>
+            <li><strong>پارامترها:</strong> نسبت تصویر و کنترل‌های لازم در انتهای پرامپت.</li>
+          </ol>
+          <pre class="prompt-example">minimal luxury product photography of a dark blue perfume bottle,
+black reflective stone, soft cyan rim light, centered composition,
+high detail, premium advertising mood --ar 4:5</pre></section>
+          <section aria-labelledby="parameters"><h2 id="parameters">پارامترها را کجا بنویسیم؟</h2>
+          <p>طبق مستندات Midjourney، پارامترها در انتهای متن پرامپت قرار می‌گیرند. فاصله و نگارش درست آن‌ها مهم است. پارامتر نسبت تصویر برای هماهنگ کردن کادر با کانال انتشار کاربرد زیادی دارد و کنترل‌های تنوع یا سبک نیز می‌توانند دامنه خروجی را تغییر دهند.</p>
+          <p>همه پارامترها در همه نسخه‌ها یکسان نیستند. به‌جای حفظ کردن فهرست‌های قدیمی، صفحه رسمی Parameter List را مرجع قرار دهید.</p></section>
+          <section aria-labelledby="references"><h2 id="references">استفاده از تصویر مرجع</h2>
+          <p>Image Prompt می‌تواند عناصر اصلی تصویر مرجع را برای هدایت محتوا، ترکیب‌بندی یا رنگ در نظر بگیرد. تصویر مرجع دستور ویرایش پیکسلی دقیق نیست؛ بیشتر نقش الهام و هدایت را دارد.</p>
+          <p>در استفاده از تصویر دیگران، مجوز، حریم خصوصی و حق استفاده تجاری را بررسی کنید. قرار دادن تصویر مرجع به معنی داشتن حق کپی یا بازتولید آن نیست.</p></section>
+          <section aria-labelledby="iteration"><h2 id="iteration">روش اصلاح خروجی</h2>
+          <ol>
+            <li>ابتدا با موضوع و ترکیب‌بندی ساده شروع کنید.</li>
+            <li>بهترین جهت بصری را انتخاب و تغییرات کوچک بسازید.</li>
+            <li>فقط یک متغیر را در هر آزمون تغییر دهید؛ نور، زاویه یا سبک.</li>
+            <li>موارد ناخواسته را با توصیف مثبت یا کنترل مناسب کاهش دهید.</li>
+            <li>برای مجموعه تصاویر، واژگان ثابت برند و نسبت تصویر ثابت نگه دارید.</li>
+          </ol>
+          <div class="callout success"><p>هدف از تکرار، طولانی‌تر کردن پرامپت نیست؛ کشف دقیق واژه‌هایی است که بیشترین اثر بصری را دارند.</p></div></section>
+          <section aria-labelledby="mistakes"><h2 id="mistakes">اشتباهات رایج</h2>
+          <ul>
+            <li>ترکیب چند سبک متضاد بدون اولویت.</li>
+            <li>درخواست ده‌ها جزئیات ریز در یک تصویر.</li>
+            <li>استفاده از پارامتر قدیمی بدون بررسی نسخه.</li>
+            <li>انتظار ویرایش دقیق از یک Image Prompt.</li>
+            <li>نادیده گرفتن حق استفاده از چهره، لوگو و اثر مرجع.</li>
+          </ul></section>
+        </article>
+
+        <aside class="sources" aria-label="منابع">
+          <h2>منابع و مطالعه بیشتر</h2>
+          <ul>
+          <li><a href="https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics" target="_blank" rel="noopener noreferrer">مبانی پرامپت ـ Midjourney Docs</a></li>
+          <li><a href="https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List" target="_blank" rel="noopener noreferrer">فهرست پارامترها ـ Midjourney Docs</a></li>
+          <li><a href="https://docs.midjourney.com/hc/en-us/articles/32040250122381-Image-Prompts" target="_blank" rel="noopener noreferrer">راهنمای Image Prompts ـ Midjourney Docs</a></li>
+          </ul>
+        </aside>
+
+        <section class="article-cta">
+          <h2>مشاهده پک تصویرسازی با AI</h2>
+          <p>پک تصویرسازی با AI شامل ساختارهای آماده برای سبک‌ها و سناریوهای بصری مختلف است.</p>
+          <a class="btn" href="ai-image-pack.html"><i class="fas fa-arrow-left"></i> مشاهده پک تصویرسازی با AI</a>
+        </section>
+
+        <section class="related">
+          <h2>مقالات مرتبط</h2>
+          <div class="related-grid">
+          <a class="related-card" href="chatgpt-vs-claude-vs-gemini.html"><i class="fas fa-balance-scale"></i><span>ChatGPT vs Claude vs Gemini</span></a>
+          <a class="related-card" href="ai-freelancing.html"><i class="fas fa-laptop-code"></i><span>فریلنسری با AI</span></a>
+          <a class="related-card" href="ai-online-store-guide.html"><i class="fas fa-shopping-cart"></i><span>فروشگاه آنلاین با AI</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="container">© ۱۴۰۵ پادشاه پرامپت | تمامی حقوق محفوظ است</div></footer>
+</body>
+</html>

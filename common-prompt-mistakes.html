@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ده خطای رایج در پرامپت‌نویسی، دلیل خروجی ضعیف و روش اصلاح هر خطا همراه با قالب بازبینی پرامپت.">
+  <meta name="keywords" content="اشتباهات پرامپت نویسی, اصلاح پرامپت, پرامپت ضعیف, آموزش ChatGPT">
+  <meta name="author" content="پادشاه پرامپت">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://padshahprompt.ir/common-prompt-mistakes.html">
+  <title>۱۰ اشتباه رایج در پرامپت‌نویسی و راه اصلاح | پادشاه پرامپت</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="article.css">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="۱۰ اشتباه رایج در پرامپت‌نویسی و راه اصلاح">
+  <meta property="og:description" content="ده خطای رایج در پرامپت‌نویسی، دلیل خروجی ضعیف و روش اصلاح هر خطا همراه با قالب بازبینی پرامپت.">
+  <meta property="og:url" content="https://padshahprompt.ir/common-prompt-mistakes.html">
+  <meta property="og:site_name" content="پادشاه پرامپت">
+  <meta property="og:image" content="https://padshahprompt.ir/social-avatar.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"۱۰ اشتباه رایج در پرامپت‌نویسی و راه اصلاح","description":"ده خطای رایج در پرامپت‌نویسی، دلیل خروجی ضعیف و روش اصلاح هر خطا همراه با قالب بازبینی پرامپت.","inLanguage":"fa-IR","datePublished":"2026-07-27","dateModified":"2026-07-27","mainEntityOfPage":"https://padshahprompt.ir/common-prompt-mistakes.html","author":{"@type":"Organization","name":"پادشاه پرامپت","url":"https://padshahprompt.ir/"},"publisher":{"@type":"Organization","name":"پادشاه پرامپت","logo":{"@type":"ImageObject","url":"https://padshahprompt.ir/logo-original.png"}},"image":"https://padshahprompt.ir/social-avatar.svg"}</script>
+</head>
+<body>
+  <nav class="navbar" aria-label="ناوبری اصلی">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html"><img class="brand-logo-img" src="logo-original.png" alt="لوگوی پادشاه پرامپت" width="58" height="58">پادشاه پرامپت</a>
+      <div class="nav-links">
+        <a href="index.html#blog">همه مقالات</a>
+        <a href="index.html"><i class="fas fa-arrow-right"></i> خانه</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="article-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">
+        <a href="index.html">خانه</a><span>/</span><a href="index.html#blog">مقالات</a><span>/</span><span>اشتباهات رایج در پرامپت‌نویسی</span>
+      </nav>
+      <div class="article-icon" aria-hidden="true"><i class="fas fa-exclamation-triangle"></i></div>
+      <h1>۱۰ اشتباه رایج در پرامپت‌نویسی و راه اصلاح</h1>
+      <p class="lead">ده خطای رایج در پرامپت‌نویسی، دلیل خروجی ضعیف و روش اصلاح هر خطا همراه با قالب بازبینی پرامپت.</p>
+      <div class="article-meta">
+        <span><i class="far fa-calendar-alt"></i> به‌روزرسانی: مرداد ۱۴۰۵</span>
+        <span><i class="far fa-clock"></i> زمان مطالعه: 9 دقیقه</span>
+        <span><i class="far fa-user"></i> تحریریه پادشاه پرامپت</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-main">
+    <div class="container">
+      <div class="article-shell">
+        <nav class="toc" aria-label="فهرست مقاله">
+          <h2>در این مقاله می‌خوانید</h2>
+          <ol>
+              <li><a href="#mistakes">ده خطایی که خروجی را ضعیف می‌کند</a></li>
+              <li><a href="#repair">روش سریع اصلاح یک پرامپت</a></li>
+              <li><a href="#hallucination">برای کاهش اطلاعات ساختگی چه کنیم؟</a></li>
+              <li><a href="#iteration">بازخورد مبهم ندهید</a></li>
+              <li><a href="#checklist">چک‌لیست ۳۰ ثانیه‌ای</a></li>
+          </ol>
+        </nav>
+
+        <article class="article-body">
+          <section aria-labelledby="mistakes"><h2 id="mistakes">ده خطایی که خروجی را ضعیف می‌کند</h2>
+          <ol>
+            <li><strong>درخواست مبهم:</strong> «یک متن خوب بنویس» معیار و هدف ندارد.</li>
+            <li><strong>نبود زمینه:</strong> مدل مخاطب، محصول یا کانال را نمی‌داند.</li>
+            <li><strong>چند وظیفه نامرتبط:</strong> تحقیق، نگارش و تحلیل همه در یک مرحله فشرده شده‌اند.</li>
+            <li><strong>ندادن قالب خروجی:</strong> پاسخ درست است اما قابل استفاده نیست.</li>
+            <li><strong>محدودیت‌های متناقض:</strong> هم «کامل» می‌خواهید و هم «در ۵۰ کلمه».</li>
+            <li><strong>اعتماد به اطلاعات ساختگی:</strong> آمار، منبع یا نام بدون بررسی پذیرفته می‌شود.</li>
+            <li><strong>درخواست تقلید مستقیم:</strong> به‌جای ویژگی‌های سبک، نام فرد یا اثر را جایگزین توضیح می‌کنید.</li>
+            <li><strong>دادن داده حساس:</strong> اطلاعات مشتری یا سند محرمانه بدون بررسی سیاست وارد می‌شود.</li>
+            <li><strong>پذیرش اولین پاسخ:</strong> هیچ بازخورد یا اصلاحی انجام نمی‌شود.</li>
+            <li><strong>تمرکز روی طول پرامپت:</strong> جزئیات بی‌اثر، هدف اصلی را پنهان می‌کنند.</li>
+          </ol></section>
+          <section aria-labelledby="repair"><h2 id="repair">روش سریع اصلاح یک پرامپت</h2>
+          <p>پرامپت فعلی را با پنج سؤال بررسی کنید: خروجی دقیق چیست؟ مخاطب کیست؟ چه اطلاعاتی کم است؟ چه محدودیتی واقعاً مهم است؟ پاسخ باید در چه قالبی تحویل شود؟</p>
+          <pre class="prompt-example">پرامپت زیر را ارزیابی کن، اما هنوز وظیفه اصلی را انجام نده.
+ابهام‌ها، اطلاعات گمشده، محدودیت‌های متناقض
+و خطر تولید اطلاعات ساختگی را فهرست کن.
+سپس یک نسخه کوتاه‌تر و دقیق‌تر پیشنهاد بده.
+
+پرامپت:
+"""
+[پرامپت فعلی]
+"""</pre></section>
+          <section aria-labelledby="hallucination"><h2 id="hallucination">برای کاهش اطلاعات ساختگی چه کنیم؟</h2>
+          <ul>
+            <li>متن یا داده مرجع را داخل پرامپت قرار دهید.</li>
+            <li>از مدل بخواهید فقط بر اساس منبع داده‌شده پاسخ دهد.</li>
+            <li>موارد نامطمئن را با برچسب مشخص کند.</li>
+            <li>برای ادعاهای مهم لینک یا منبع اولیه بخواهید و خودتان بررسی کنید.</li>
+            <li>صریح بنویسید اگر اطلاعات کافی نیست، سؤال بپرسد یا اعلام کند.</li>
+          </ul>
+          <div class="callout"><p>هیچ جمله جادویی خطا را صفر نمی‌کند. راستی‌آزمایی برای اطلاعات مهم همچنان ضروری است.</p></div></section>
+          <section aria-labelledby="iteration"><h2 id="iteration">بازخورد مبهم ندهید</h2>
+          <p>«بهترش کن» نمی‌گوید کدام بخش مشکل دارد. بازخورد را به معیار تبدیل کنید: کوتاه‌تر، رسمی‌تر، با مثال بیشتر، بدون تکرار، فقط بر اساس منبع یا در قالب جدول.</p>
+          <p>اگر خروجی چند مشکل دارد، آن‌ها را شماره‌گذاری کنید. اصلاح مرحله‌ای معمولاً از درخواست تولید کامل مجدد، کنترل‌پذیرتر است.</p></section>
+          <section aria-labelledby="checklist"><h2 id="checklist">چک‌لیست ۳۰ ثانیه‌ای</h2>
+          <ul>
+            <li>فعل و هدف روشن‌اند.</li>
+            <li>زمینه و مخاطب مشخص‌اند.</li>
+            <li>داده مرجع از دستور جدا شده است.</li>
+            <li>قالب و طول خروجی تعیین شده‌اند.</li>
+            <li>مسیر برخورد با اطلاعات ناکافی مشخص است.</li>
+            <li>هیچ داده حساس غیرضروری وجود ندارد.</li>
+          </ul></section>
+        </article>
+
+        <aside class="sources" aria-label="منابع">
+          <h2>منابع و مطالعه بیشتر</h2>
+          <ul>
+          <li><a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt" target="_blank" rel="noopener noreferrer">بهترین روش‌های پرامپت‌نویسی برای ChatGPT ـ OpenAI</a></li>
+          <li><a href="https://help.openai.com/en/articles/4936848-how-do-i-create-a-good-prompt-for-an-ai-model" target="_blank" rel="noopener noreferrer">چگونه پرامپت خوب بنویسیم؟ ـ OpenAI</a></li>
+          </ul>
+        </aside>
+
+        <section class="article-cta">
+          <h2>مشاهده پرامپت‌های ساختاریافته</h2>
+          <p>پرامپت‌های آماده سایت با متغیرهای مشخص طراحی شده‌اند تا خطاهای رایج در تعریف زمینه و خروجی کمتر شوند.</p>
+          <a class="btn" href="content-writing-pack.html"><i class="fas fa-arrow-left"></i> مشاهده پرامپت‌های ساختاریافته</a>
+        </section>
+
+        <section class="related">
+          <h2>مقالات مرتبط</h2>
+          <div class="related-grid">
+          <a class="related-card" href="what-is-a-prompt.html"><i class="fas fa-robot"></i><span>پرامپت چیست؟ راهنمای کامل</span></a>
+          <a class="related-card" href="what-is-artificial-intelligence.html"><i class="fas fa-brain"></i><span>هوش مصنوعی چیست؟</span></a>
+          <a class="related-card" href="make-money-with-ai.html"><i class="fas fa-chart-line"></i><span>کسب درآمد از هوش مصنوعی</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="container">© ۱۴۰۵ پادشاه پرامپت | تمامی حقوق محفوظ است</div></footer>
+</body>
+</html>
