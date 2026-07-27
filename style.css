@@ -439,6 +439,8 @@ html, body { min-height: 100%; }
   }
   body, body * { font-family: 'Vazirmatn', Tahoma, sans-serif; }
   .navbar, nav.navbar {
+    position: sticky !important;
+    top: 0 !important;
     background: rgba(4,16,29,.72) !important;
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px) !important;
