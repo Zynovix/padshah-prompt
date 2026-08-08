@@ -56,10 +56,67 @@ body{font-family:Vazirmatn,sans-serif}
 .secure-payment-note{max-width:640px;margin:18px 0 0;padding:14px 16px;border-right:3px solid #59f0c2;border-radius:10px;background:rgba(89,240,194,.07);color:var(--text-muted);font-size:.9rem;line-height:1.9}
 .secure-payment-note strong{display:block;color:var(--primary);margin-bottom:3px}
 .secure-payment-note p{margin:0}
+
+.product-faq{max-width:900px;margin:54px auto 0}
+.product-faq>h2{text-align:center;margin-bottom:22px}
+.product-faq details{margin:12px 0;border:1px solid rgba(100,150,255,.2);border-radius:16px;background:rgba(255,255,255,.045);overflow:hidden}
+.product-faq summary{position:relative;cursor:pointer;list-style:none;padding:18px 52px 18px 18px;font-weight:800;line-height:1.8}
+.product-faq summary::-webkit-details-marker{display:none}
+.product-faq summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.35rem;color:var(--primary)}
+.product-faq details[open] summary::after{content:'−'}
+.product-faq details p{margin:0;padding:0 20px 20px;color:var(--text-muted);line-height:1.95}
 @keyframes fade{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
 @keyframes float{50%{transform:translateY(-12px)}}
 @media(max-width:800px){.hero-ai{flex-direction:column}.product-card-img{width:min(280px,100%)}}
 </style>
+<script type="application/ld+json" id="product-faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "این پک برای شروع یک کانال یوتیوب هم مناسب است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بله. بخش‌های این محصول از استراتژی کانال، شناخت مخاطب و ایده‌پردازی تا عنوان، هوک، سناریو، انتشار، تحلیل و درآمد را پوشش می‌دهند و می‌توانید متناسب با مرحله فعلی کانال از آن‌ها استفاده کنید."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "پرامپت‌های این بسته با چه ابزارهایی کار می‌کنند؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "طبق مشخصات محصول، پرامپت‌های متنی این بسته برای ChatGPT، Claude و Gemini قابل استفاده‌اند. خروجی نهایی می‌تواند بین مدل‌ها متفاوت باشد و باید قبل از انتشار بازبینی شود."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا عنوان، تصویر بندانگشتی و سناریوی ویدیو را هم پوشش می‌دهد؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بله. این بسته برای موضوعاتی مانند عنوان و هوک، ایده تصویر بندانگشتی، سناریونویسی، برنامه انتشار، سئو یوتیوب و تحلیل عملکرد طراحی شده است."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا استفاده از این پرامپت‌ها رشد یا بازدید را تضمین می‌کند؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "خیر. پرامپت‌ها برای ساختاردهی و بهبود فرایند تولید محتوا طراحی شده‌اند، اما بازدید، رشد، درآمد یا نتیجه مشخصی را تضمین نمی‌کنند."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "فایل محصول چه زمانی تحویل می‌شود؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -116,6 +173,14 @@ body{font-family:Vazirmatn,sans-serif}
 <div class="ai-card"><h3>عنوان، هوک و سناریو</h3><p>عنوان جذاب و قابل‌آزمایش، تصویر بندانگشتی و متن ویدیو.</p></div>
 <div class="ai-card"><h3>انتشار، تحلیل و درآمد</h3><p>سئو یوتیوب، تحلیل عملکرد و بهینه‌سازی رشد.</p></div>
 </div>
+</section>
+<section class="product-faq" aria-labelledby="product-faq-title">
+<h2 id="product-faq-title">سؤالات متداول این محصول</h2>
+<details><summary>این پک برای شروع یک کانال یوتیوب هم مناسب است؟</summary><p>بله. بخش‌های این محصول از استراتژی کانال، شناخت مخاطب و ایده‌پردازی تا عنوان، هوک، سناریو، انتشار، تحلیل و درآمد را پوشش می‌دهند و می‌توانید متناسب با مرحله فعلی کانال از آن‌ها استفاده کنید.</p></details>
+<details><summary>پرامپت‌های این بسته با چه ابزارهایی کار می‌کنند؟</summary><p>طبق مشخصات محصول، پرامپت‌های متنی این بسته برای ChatGPT، Claude و Gemini قابل استفاده‌اند. خروجی نهایی می‌تواند بین مدل‌ها متفاوت باشد و باید قبل از انتشار بازبینی شود.</p></details>
+<details><summary>آیا عنوان، تصویر بندانگشتی و سناریوی ویدیو را هم پوشش می‌دهد؟</summary><p>بله. این بسته برای موضوعاتی مانند عنوان و هوک، ایده تصویر بندانگشتی، سناریونویسی، برنامه انتشار، سئو یوتیوب و تحلیل عملکرد طراحی شده است.</p></details>
+<details><summary>آیا استفاده از این پرامپت‌ها رشد یا بازدید را تضمین می‌کند؟</summary><p>خیر. پرامپت‌ها برای ساختاردهی و بهبود فرایند تولید محتوا طراحی شده‌اند، اما بازدید، رشد، درآمد یا نتیجه مشخصی را تضمین نمی‌کنند.</p></details>
+<details><summary>فایل محصول چه زمانی تحویل می‌شود؟</summary><p>پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود.</p></details>
 </section>
 </main>
 

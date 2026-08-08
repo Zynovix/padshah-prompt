@@ -56,10 +56,67 @@ body{font-family:Vazirmatn,sans-serif}
 .secure-payment-note{max-width:640px;margin:18px 0 0;padding:14px 16px;border-right:3px solid #59f0c2;border-radius:10px;background:rgba(89,240,194,.07);color:var(--text-muted);font-size:.9rem;line-height:1.9}
 .secure-payment-note strong{display:block;color:var(--primary);margin-bottom:3px}
 .secure-payment-note p{margin:0}
+
+.product-faq{max-width:900px;margin:54px auto 0}
+.product-faq>h2{text-align:center;margin-bottom:22px}
+.product-faq details{margin:12px 0;border:1px solid rgba(100,150,255,.2);border-radius:16px;background:rgba(255,255,255,.045);overflow:hidden}
+.product-faq summary{position:relative;cursor:pointer;list-style:none;padding:18px 52px 18px 18px;font-weight:800;line-height:1.8}
+.product-faq summary::-webkit-details-marker{display:none}
+.product-faq summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.35rem;color:var(--primary)}
+.product-faq details[open] summary::after{content:'−'}
+.product-faq details p{margin:0;padding:0 20px 20px;color:var(--text-muted);line-height:1.95}
 @keyframes fade{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
 @keyframes float{50%{transform:translateY(-12px)}}
 @media(max-width:800px){.hero-ai{flex-direction:column}.product-card-img{width:min(280px,100%)}}
 </style>
+<script type="application/ld+json" id="product-faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "این پک برای فریلنسرهای تازه‌کار هم مناسب است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بله. محصول از انتخاب حوزه و جایگاه، ساخت پروفایل و نمونه‌کار و جذب مشتری شروع می‌شود و تا پروپوزال، قیمت، محدوده کار، تحویل، ارتباط و حفظ مشتری ادامه پیدا می‌کند."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا برای نوشتن پروپوزال و مذاکره با مشتری کاربرد دارد؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بله. یکی از بخش‌های اصلی بسته به پروپوزال، قیمت‌گذاری، مذاکره و تعیین محدوده کار اختصاص دارد و بخش‌های دیگری نیز برای ارتباط و تحویل پروژه در نظر گرفته شده است."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا متن قرارداد تولیدشده توسط هوش مصنوعی از نظر حقوقی کافی است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "خیر. پرامپت‌ها می‌توانند برای ساخت پیش‌نویس و مشخص‌کردن نکات موردنیاز کمک کنند، اما قرارداد یا تعهد حقوقی مهم باید با شرایط واقعی پروژه و نظر متخصص حقوقی بررسی شود."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا این بسته فقط برای کار در پلتفرم‌های فریلنسری است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "خیر. ساختار موضوعات بسته برای فریلنسرها، متخصصان مستقل، دورکارها و تیم‌های کوچک طراحی شده و به یک پلتفرم خاص محدود نیست."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "فایل محصول چه زمانی تحویل می‌شود؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -116,6 +173,14 @@ body{font-family:Vazirmatn,sans-serif}
 <div class="ai-card"><h3>پروپوزال، قیمت و قرارداد</h3><p>پیشنهاد پروژه، مذاکره و تعیین محدوده کار.</p></div>
 <div class="ai-card"><h3>تحویل، ارتباط و رشد</h3><p>کنترل کیفیت، حفظ مشتری و ساخت سیستم کاری.</p></div>
 </div>
+</section>
+<section class="product-faq" aria-labelledby="product-faq-title">
+<h2 id="product-faq-title">سؤالات متداول این محصول</h2>
+<details><summary>این پک برای فریلنسرهای تازه‌کار هم مناسب است؟</summary><p>بله. محصول از انتخاب حوزه و جایگاه، ساخت پروفایل و نمونه‌کار و جذب مشتری شروع می‌شود و تا پروپوزال، قیمت، محدوده کار، تحویل، ارتباط و حفظ مشتری ادامه پیدا می‌کند.</p></details>
+<details><summary>آیا برای نوشتن پروپوزال و مذاکره با مشتری کاربرد دارد؟</summary><p>بله. یکی از بخش‌های اصلی بسته به پروپوزال، قیمت‌گذاری، مذاکره و تعیین محدوده کار اختصاص دارد و بخش‌های دیگری نیز برای ارتباط و تحویل پروژه در نظر گرفته شده است.</p></details>
+<details><summary>آیا متن قرارداد تولیدشده توسط هوش مصنوعی از نظر حقوقی کافی است؟</summary><p>خیر. پرامپت‌ها می‌توانند برای ساخت پیش‌نویس و مشخص‌کردن نکات موردنیاز کمک کنند، اما قرارداد یا تعهد حقوقی مهم باید با شرایط واقعی پروژه و نظر متخصص حقوقی بررسی شود.</p></details>
+<details><summary>آیا این بسته فقط برای کار در پلتفرم‌های فریلنسری است؟</summary><p>خیر. ساختار موضوعات بسته برای فریلنسرها، متخصصان مستقل، دورکارها و تیم‌های کوچک طراحی شده و به یک پلتفرم خاص محدود نیست.</p></details>
+<details><summary>فایل محصول چه زمانی تحویل می‌شود؟</summary><p>پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود.</p></details>
 </section>
 </main>
 

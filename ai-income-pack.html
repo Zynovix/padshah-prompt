@@ -56,10 +56,67 @@ body{font-family:Vazirmatn,sans-serif}
 .secure-payment-note{max-width:640px;margin:18px 0 0;padding:14px 16px;border-right:3px solid #59f0c2;border-radius:10px;background:rgba(89,240,194,.07);color:var(--text-muted);font-size:.9rem;line-height:1.9}
 .secure-payment-note strong{display:block;color:var(--primary);margin-bottom:3px}
 .secure-payment-note p{margin:0}
+
+.product-faq{max-width:900px;margin:54px auto 0}
+.product-faq>h2{text-align:center;margin-bottom:22px}
+.product-faq details{margin:12px 0;border:1px solid rgba(100,150,255,.2);border-radius:16px;background:rgba(255,255,255,.045);overflow:hidden}
+.product-faq summary{position:relative;cursor:pointer;list-style:none;padding:18px 52px 18px 18px;font-weight:800;line-height:1.8}
+.product-faq summary::-webkit-details-marker{display:none}
+.product-faq summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.35rem;color:var(--primary)}
+.product-faq details[open] summary::after{content:'−'}
+.product-faq details p{margin:0;padding:0 20px 20px;color:var(--text-muted);line-height:1.95}
 @keyframes fade{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
 @keyframes float{50%{transform:translateY(-12px)}}
 @media(max-width:800px){.hero-ai{flex-direction:column}.product-card-img{width:min(280px,100%)}}
 </style>
+<script type="application/ld+json" id="product-faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "این پک برای چه کسانی طراحی شده است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "برای کارآفرینان، فریلنسرها، صاحبان کسب‌وکار و افرادی که می‌خواهند از هوش مصنوعی برای بررسی ایده، مدل درآمدی، پیشنهاد، قیمت‌گذاری، بازاریابی و رشد استفاده کنند."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا این بسته درآمد مشخصی را تضمین می‌کند؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "خیر. این محصول برای تحلیل، ساختاردهی تصمیم و طراحی اقدام‌های قابل بررسی ساخته شده است و هیچ میزان درآمد، فروش یا سودی را تضمین نمی‌کند."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا برای کسی که هنوز ایده کسب‌وکار ندارد مناسب است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بله. بخشی از بسته روی شناسایی مهارت، مسئله بازار و فرصت مناسب تمرکز دارد و سپس به اعتبارسنجی، مدل کسب‌وکار، پیشنهاد و قیمت‌گذاری می‌رسد."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا خروجی این پرامپت‌ها جایگزین مشاوره مالی یا حقوقی است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "خیر. برای موضوعات مالی، مالیاتی، قراردادی یا حقوقی حساس باید از متخصص مربوط استفاده شود و تصمیم نهایی فقط بر اساس خروجی هوش مصنوعی گرفته نشود."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "فایل محصول چه زمانی تحویل می‌شود؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -116,6 +173,14 @@ body{font-family:Vazirmatn,sans-serif}
 <div class="ai-card"><h3>پیشنهاد و قیمت‌گذاری</h3><p>طراحی بسته خدمت و انتخاب مدل قیمت.</p></div>
 <div class="ai-card"><h3>بازاریابی، فروش و رشد</h3><p>کانال جذب، فرایند فروش و برنامه عملی ۳۰روزه.</p></div>
 </div>
+</section>
+<section class="product-faq" aria-labelledby="product-faq-title">
+<h2 id="product-faq-title">سؤالات متداول این محصول</h2>
+<details><summary>این پک برای چه کسانی طراحی شده است؟</summary><p>برای کارآفرینان، فریلنسرها، صاحبان کسب‌وکار و افرادی که می‌خواهند از هوش مصنوعی برای بررسی ایده، مدل درآمدی، پیشنهاد، قیمت‌گذاری، بازاریابی و رشد استفاده کنند.</p></details>
+<details><summary>آیا این بسته درآمد مشخصی را تضمین می‌کند؟</summary><p>خیر. این محصول برای تحلیل، ساختاردهی تصمیم و طراحی اقدام‌های قابل بررسی ساخته شده است و هیچ میزان درآمد، فروش یا سودی را تضمین نمی‌کند.</p></details>
+<details><summary>آیا برای کسی که هنوز ایده کسب‌وکار ندارد مناسب است؟</summary><p>بله. بخشی از بسته روی شناسایی مهارت، مسئله بازار و فرصت مناسب تمرکز دارد و سپس به اعتبارسنجی، مدل کسب‌وکار، پیشنهاد و قیمت‌گذاری می‌رسد.</p></details>
+<details><summary>آیا خروجی این پرامپت‌ها جایگزین مشاوره مالی یا حقوقی است؟</summary><p>خیر. برای موضوعات مالی، مالیاتی، قراردادی یا حقوقی حساس باید از متخصص مربوط استفاده شود و تصمیم نهایی فقط بر اساس خروجی هوش مصنوعی گرفته نشود.</p></details>
+<details><summary>فایل محصول چه زمانی تحویل می‌شود؟</summary><p>پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود.</p></details>
 </section>
 </main>
 

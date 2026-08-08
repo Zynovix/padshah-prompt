@@ -56,10 +56,67 @@ body{font-family:Vazirmatn,sans-serif}
 .secure-payment-note{max-width:640px;margin:18px 0 0;padding:14px 16px;border-right:3px solid #59f0c2;border-radius:10px;background:rgba(89,240,194,.07);color:var(--text-muted);font-size:.9rem;line-height:1.9}
 .secure-payment-note strong{display:block;color:var(--primary);margin-bottom:3px}
 .secure-payment-note p{margin:0}
+
+.product-faq{max-width:900px;margin:54px auto 0}
+.product-faq>h2{text-align:center;margin-bottom:22px}
+.product-faq details{margin:12px 0;border:1px solid rgba(100,150,255,.2);border-radius:16px;background:rgba(255,255,255,.045);overflow:hidden}
+.product-faq summary{position:relative;cursor:pointer;list-style:none;padding:18px 52px 18px 18px;font-weight:800;line-height:1.8}
+.product-faq summary::-webkit-details-marker{display:none}
+.product-faq summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.35rem;color:var(--primary)}
+.product-faq details[open] summary::after{content:'−'}
+.product-faq details p{margin:0;padding:0 20px 20px;color:var(--text-muted);line-height:1.95}
 @keyframes fade{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
 @keyframes float{50%{transform:translateY(-12px)}}
 @media(max-width:800px){.hero-ai{flex-direction:column}.product-card-img{width:min(280px,100%)}}
 </style>
+<script type="application/ld+json" id="product-faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "این پک برای پیج‌های تازه‌کار هم مناسب است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بله. ساختار این بسته از شناخت مخاطب و برنامه‌ریزی محتوا تا هوک، ریلز، کپشن، استوری، تحلیل و فروش را پوشش می‌دهد؛ بنابراین می‌توان بخش‌های مرتبط را متناسب با مرحله فعلی پیج استفاده کرد."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "پرامپت‌ها با چه ابزارهایی قابل استفاده‌اند؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "طبق مشخصات همین محصول، پرامپت‌های متنی این بسته برای استفاده با ChatGPT، Claude و Gemini طراحی شده‌اند. کیفیت خروجی به مدل، اطلاعات ورودی و میزان شخصی‌سازی شما بستگی دارد."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا فقط برای ریلز است یا پست و استوری را هم پوشش می‌دهد؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "فقط محدود به ریلز نیست. بسته شامل موضوعاتی مانند استراتژی محتوا، ایده و تقویم، هوک، سناریوی ریلز، کپشن، استوری، تعامل، تحلیل و فروش است."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا می‌توانم پرامپت‌ها را برای حوزه کاری خودم شخصی‌سازی کنم؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بله. پرامپت‌ها ساختاریافته‌اند و برای استفاده عملی باید اطلاعات واقعی کسب‌وکار، مخاطب، موضوع، لحن و هدف خودتان را در بخش‌های قابل تغییر وارد کنید."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "فایل محصول چه زمانی تحویل می‌شود؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیلی که در فرم سفارش ثبت کرده‌اید ارسال می‌شود."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -116,6 +173,14 @@ body{font-family:Vazirmatn,sans-serif}
 <div class="ai-card"><h3>ریلز، کپشن و استوری</h3><p>سناریو، دعوت به اقدام و افزایش تعامل.</p></div>
 <div class="ai-card"><h3>رشد، تحلیل و فروش</h3><p>بهینه‌سازی پیج، تحلیل عملکرد و درآمدزایی.</p></div>
 </div>
+</section>
+<section class="product-faq" aria-labelledby="product-faq-title">
+<h2 id="product-faq-title">سؤالات متداول این محصول</h2>
+<details><summary>این پک برای پیج‌های تازه‌کار هم مناسب است؟</summary><p>بله. ساختار این بسته از شناخت مخاطب و برنامه‌ریزی محتوا تا هوک، ریلز، کپشن، استوری، تحلیل و فروش را پوشش می‌دهد؛ بنابراین می‌توان بخش‌های مرتبط را متناسب با مرحله فعلی پیج استفاده کرد.</p></details>
+<details><summary>پرامپت‌ها با چه ابزارهایی قابل استفاده‌اند؟</summary><p>طبق مشخصات همین محصول، پرامپت‌های متنی این بسته برای استفاده با ChatGPT، Claude و Gemini طراحی شده‌اند. کیفیت خروجی به مدل، اطلاعات ورودی و میزان شخصی‌سازی شما بستگی دارد.</p></details>
+<details><summary>آیا فقط برای ریلز است یا پست و استوری را هم پوشش می‌دهد؟</summary><p>فقط محدود به ریلز نیست. بسته شامل موضوعاتی مانند استراتژی محتوا، ایده و تقویم، هوک، سناریوی ریلز، کپشن، استوری، تعامل، تحلیل و فروش است.</p></details>
+<details><summary>آیا می‌توانم پرامپت‌ها را برای حوزه کاری خودم شخصی‌سازی کنم؟</summary><p>بله. پرامپت‌ها ساختاریافته‌اند و برای استفاده عملی باید اطلاعات واقعی کسب‌وکار، مخاطب، موضوع، لحن و هدف خودتان را در بخش‌های قابل تغییر وارد کنید.</p></details>
+<details><summary>فایل محصول چه زمانی تحویل می‌شود؟</summary><p>پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیلی که در فرم سفارش ثبت کرده‌اید ارسال می‌شود.</p></details>
 </section>
 </main>
 
