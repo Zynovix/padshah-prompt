@@ -28,6 +28,28 @@
     }
     </script>
 <meta property="og:image" content="https://padshahprompt.ir/social-avatar.svg">
+
+    <style>
+        .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+        .newsletter-signup{align-items:center;gap:28px}
+        .newsletter-copy{min-width:0}
+        .newsletter-form{width:min(100%,560px);display:grid;gap:12px;text-align:right}
+        .newsletter-row{display:flex;gap:10px;align-items:stretch}
+        .newsletter-email{flex:1;min-width:0;border:1px solid rgba(255,255,255,.16);border-radius:12px;background:rgba(5,18,31,.72);color:#fff;padding:13px 14px;font:inherit;outline:none;transition:border-color .2s ease,box-shadow .2s ease}
+        .newsletter-email::placeholder{color:rgba(255,255,255,.55)}
+        .newsletter-email:focus{border-color:rgba(112,203,255,.72);box-shadow:0 0 0 3px rgba(112,203,255,.12)}
+        .newsletter-submit{white-space:nowrap;border:0;cursor:pointer}
+        .newsletter-submit[disabled]{opacity:.7;cursor:wait}
+        .newsletter-consent{display:flex;align-items:flex-start;gap:9px;color:var(--text-muted);font-size:.88rem;line-height:1.8;cursor:pointer}
+        .newsletter-consent input{margin-top:6px;accent-color:#d9ae58;flex:0 0 auto}
+        .newsletter-privacy{margin:0;color:var(--text-muted);font-size:.8rem;line-height:1.8}
+        .newsletter-privacy a{color:#86E8FF;text-decoration:underline;text-underline-offset:3px}
+        .newsletter-status{min-height:24px;font-size:.88rem;font-weight:700}
+        .newsletter-status.is-success{color:#8ff0bc}
+        .newsletter-status.is-error{color:#ffb2b2}
+        .newsletter-sink{position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none}
+        @media (max-width:700px){.newsletter-signup{align-items:stretch}.newsletter-form{width:100%}.newsletter-row{flex-direction:column}.newsletter-submit{width:100%}}
+    </style>
 </head>
 <body>
 
@@ -668,14 +690,37 @@
     </section>
 
     <!-- Newsletter -->
-    <section class="section">
+    <section class="section" id="email-club">
         <div class="container">
-            <div class="newsletter">
-                <div>
+            <div class="newsletter newsletter-signup">
+                <div class="newsletter-copy">
                     <h2>پرامپت‌های کاربردی رایگان</h2>
-                    <p>نمونه‌های جدید، نکات پرامپت‌نویسی و آموزش‌های رایگان را از سایت و شبکه‌های اجتماعی رسمی پادشاه پرامپت دنبال کنید.</p>
+                    <p>ایمیلت را وارد کن تا پرامپت‌های رایگان، آموزش‌های کاربردی هوش مصنوعی و به‌روزرسانی‌های پادشاه پرامپت را دریافت کنی.</p>
                 </div>
-                <div class="newsletter-note">برای دریافت پرامپت‌های رایگان و اطلاع از به‌روزرسانی‌ها، شبکه‌های اجتماعی و بخش آموزش رایگان سایت را دنبال کنید.</div>
+
+                <form class="newsletter-form" id="newsletterForm"
+                      action="https://docs.google.com/forms/d/e/1FAIpQLScsr8HyDy2sY6_ywJg4kKjEZYl_DTkaWjU9fekEzvO_4xJOJg/formResponse"
+                      method="post" target="newsletter_sink" accept-charset="UTF-8">
+                    <div class="newsletter-row">
+                        <label class="sr-only" for="newsletterEmail">ایمیل شما</label>
+                        <input id="newsletterEmail" class="newsletter-email" type="email"
+                               name="entry.2085850525" autocomplete="email" inputmode="email"
+                               placeholder="ایمیل شما" aria-describedby="newsletterPrivacy" required>
+                        <button class="btn btn-primary newsletter-submit" id="newsletterSubmit" type="submit">
+                            <i class="fas fa-envelope"></i> عضویت رایگان
+                        </button>
+                    </div>
+                    <label class="newsletter-consent">
+                        <input type="checkbox" name="entry.626106410" value="موافقم" required>
+                        <span>مایلم پرامپت‌های رایگان، آموزش‌های هوش مصنوعی و اطلاع‌رسانی‌های پادشاه پرامپت را از طریق ایمیل دریافت کنم.</span>
+                    </label>
+                    <p class="newsletter-privacy" id="newsletterPrivacy">
+                        اطلاعات شما فروخته نمی‌شود و می‌توانید درخواست توقف پیام‌ها یا حذف اطلاعات قابل حذف خود را ثبت کنید.
+                        <a href="privacy.html">سیاست حریم خصوصی</a>
+                    </p>
+                    <div class="newsletter-status" id="newsletterStatus" role="status" aria-live="polite"></div>
+                </form>
+                <iframe name="newsletter_sink" id="newsletterSink" title="ثبت عضویت ایمیلی" class="newsletter-sink"></iframe>
             </div>
         </div>
     </section>
@@ -770,5 +815,33 @@
         });
     </script>
 
+
+<script>
+(function(){
+  const form=document.getElementById('newsletterForm');
+  const sink=document.getElementById('newsletterSink');
+  const status=document.getElementById('newsletterStatus');
+  const submit=document.getElementById('newsletterSubmit');
+  if(!form||!sink||!status||!submit) return;
+
+  let submitted=false;
+  form.addEventListener('submit',function(){
+    if(!form.checkValidity()) return;
+    submitted=true;
+    submit.disabled=true;
+    status.className='newsletter-status';
+    status.textContent='در حال ثبت عضویت…';
+  });
+
+  sink.addEventListener('load',function(){
+    if(!submitted) return;
+    submitted=false;
+    submit.disabled=false;
+    form.reset();
+    status.className='newsletter-status is-success';
+    status.textContent='عضویت شما با موفقیت ثبت شد. 👑';
+  });
+})();
+</script>
 </body>
 </html>
