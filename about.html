@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="درباره پادشاه پرامپت، هدف، روش طراحی محصولات و اصول کاری این فروشگاه.">
-  <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://padshahprompt.ir/about.html">
+  <meta name="robots" content="index, follow">
   <title>درباره ما | پادشاه پرامپت</title>
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.png" type="image/svg+xml">
 
   <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -71,6 +70,13 @@
     .cta{text-align:center;padding:32px;border:1px solid var(--border);border-radius:22px;background:rgba(8,25,43,.85)}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:10px;
       padding:13px 22px;border-radius:13px;background:linear-gradient(115deg,var(--primary),var(--primary-dark));font-weight:900}
+    .social-links{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .social-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 17px;border-radius:13px;
+      border:1px solid var(--border);background:rgba(8,23,40,.78);color:#EAF6FF;font-weight:800;transition:.2s ease}
+    .social-link:hover{transform:translateY(-2px);border-color:rgba(112,203,255,.38);background:rgba(12,34,56,.92)}
+    .social-link i{font-size:1.25rem}
+    .social-link.instagram i{color:#E96AAE}
+    .social-link.telegram i{color:#45D7FF}
     footer{padding:36px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted)}
     @media(max-width:760px){
       .container{width:100%;padding:0 18px}.cards,.contact-list{grid-template-columns:1fr}
@@ -90,58 +96,6 @@
 </style>
 
   <meta property="og:image" content="https://padshahprompt.ir/social-avatar.svg">
-<link href="https://cdn.jsdelivr.net/gh/aminabedi68/Estedad@v7.3.0/fonts/webfonts/statics/Estedad.css" rel="stylesheet">
-
-<style id="padshah-global-theme-fix">
-  html, body { min-height: 100%; }
-  body {
-    font-family: 'Vazirmatn', Tahoma, sans-serif !important;
-    position: relative;
-    isolation: isolate;
-    background-color: #04101d !important;
-    background-image: url('site-background.png') !important;
-    background-repeat: no-repeat !important;
-    background-position: center top !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-  }
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgba(2,10,20,.22), rgba(2,10,20,.45));
-  }
-  body, body * { font-family: 'Vazirmatn', Tahoma, sans-serif; }
-  .navbar, nav.navbar {
-    background: rgba(4,16,29,.72) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-  }
-  .hero, .section, .section-alt, .section.alt, main, header, footer, .footer {
-    background-color: transparent !important;
-  }
-  .section-alt, .section.alt {
-    background: rgba(4,16,29,.38) !important;
-  }
-  footer, .footer {
-    background: rgba(3,12,23,.68) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-  }
-  .panel, .card, .product-card, .stat-item, .blog-card, .faq-item,
-  .value-card, .review-card, .prompt-demo, .result-demo, .visual,
-  .price-panel, .prompt-box, .output-box, .final, .newsletter,
-  .contact-item, .cta, .compare-wrap {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-  @media (max-width: 900px) {
-    body { background-attachment: scroll !important; background-size: auto 100vh !important; }
-  }
-</style>
-
 </head>
 <body>
 
@@ -164,14 +118,14 @@
 <section class="panel">
   <h2>ماموریت ما</h2>
   <p>هدف ما این است که کاربران برای انجام کارهای تکراری، تولید محتوا، بازاریابی و برنامه‌ریزی، نقطه شروع دقیق‌تری داشته باشند و مجبور نباشند هر بار دستورها را از صفر طراحی کنند.</p>
-  <p>محصولات این فروشگاه باید روی ساختار، وضوح، امکان شخصی‌سازی و کاربرد عملی تمرکز داشته باشند؛ نه صرفاً افزایش تعداد پرامپت‌ها.</p>
+  <p>محصولات پادشاه پرامپت بر ساختار، وضوح، امکان شخصی‌سازی و کاربرد عملی تمرکز دارند؛ نه صرفاً افزایش تعداد پرامپت‌ها.</p>
 </section>
 <section class="panel">
   <h2>روش طراحی محصولات</h2>
   <div class="cards">
     <article class="card"><i class="fas fa-layer-group"></i><h3>ساختار مشخص</h3><p>هر پرامپت تا حد امکان شامل نقش، زمینه، محدودیت و قالب خروجی است.</p></article>
     <article class="card"><i class="fas fa-sliders-h"></i><h3>قابل شخصی‌سازی</h3><p>متغیرهایی مانند مخاطب، لحن، موضوع و هدف به‌صورت مشخص قابل تغییر هستند.</p></article>
-    <article class="card"><i class="fas fa-flask"></i><h3>بررسی کاربردی</h3><p>پرامپت‌ها باید با چند ورودی و سناریوی متفاوت بررسی شوند.</p></article>
+    <article class="card"><i class="fas fa-flask"></i><h3>بررسی کاربردی</h3><p>پرامپت‌ها با ورودی‌ها و سناریوهای مختلف بررسی می‌شوند تا ساختار آن‌ها در کاربردهای واقعی قابل استفاده باشد.</p></article>
   </div>
 </section>
 <section class="panel notice">
@@ -181,9 +135,11 @@
 <section class="cta">
   <h2>پرسشی درباره فروشگاه دارید؟</h2>
   <a class="btn" href="contact.html"><i class="fas fa-envelope"></i> تماس با پشتیبانی</a>
+  <div class="social-links" aria-label="شبکه‌های اجتماعی پادشاه پرامپت">
+    <a class="social-link instagram" href="https://instagram.com/padshahprompt" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام پادشاه پرامپت"><i class="fab fa-instagram"></i> اینستاگرام</a>
+    <a class="social-link telegram" href="https://t.me/padshahprompt" target="_blank" rel="noopener noreferrer" aria-label="تلگرام پادشاه پرامپت"><i class="fab fa-telegram-plane"></i> تلگرام</a>
+  </div>
 </section>
-
-<p class="meta">نسخه اولیه برای آماده‌سازی سایت؛ پیش از شروع فروش عمومی، اطلاعات تماس، زمان پاسخ‌گویی و جزئیات اجرایی باید نهایی شوند.</p>
 </div></main>
 
 <footer><div class="container">© ۱۴۰۵ پادشاه پرامپت | تمامی حقوق محفوظ است</div></footer>
