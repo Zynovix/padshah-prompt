@@ -447,21 +447,6 @@
         }
         .footer { background: linear-gradient(180deg,#071321,#030912); }
     
-        .prelaunch-banner{
-            position:relative; z-index:1001; display:flex; align-items:center; justify-content:center;
-            gap:10px; padding:11px 18px; text-align:center; color:#eaf8ff;
-            background:linear-gradient(90deg,#17385d,#1c5573); border-bottom:1px solid rgba(255,255,255,.14);
-            font-size:.88rem;
-        }
-        .prelaunch-banner i{color:#f2c768}
-        .prelaunch-banner + .navbar{position:sticky;top:0}
-        .coming-soon-btn,.coming-soon-btn:hover{
-            cursor:not-allowed!important; opacity:.74; box-shadow:none!important;
-            background:linear-gradient(135deg,#536173,#3f4b5c)!important; color:#eef3f8!important;
-            transform:none!important;
-        }
-
-
     .brand-logo-img{
             width:68px;
             height:68px;
@@ -487,10 +472,17 @@ html, body { min-height: 100%; }
     isolation: isolate;
     background-color: #04101d !important;
     background-image: url('site-background.png') !important;
+    background-image: image-set(
+      url('site-background.webp') type('image/webp'),
+      url('site-background.png') type('image/png')
+    ) !important;
     background-repeat: no-repeat !important;
     background-position: center top !important;
     background-size: cover !important;
     background-attachment: fixed !important;
+  }
+  @media (max-width: 768px) {
+    body { background-attachment: scroll !important; }
   }
   body::before {
     content: "";
