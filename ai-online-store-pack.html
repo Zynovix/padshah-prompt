@@ -114,7 +114,7 @@ body{font-family:Vazirmatn,sans-serif}
       "name": "فایل محصول چه زمانی تحویل می‌شود؟",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود."
+        "text": "پس از تأیید پرداخت، لینک دانلود امن و زمان‌دار محصول بلافاصله نمایش داده می‌شود."
       }
     }
   ]
@@ -144,10 +144,11 @@ body{font-family:Vazirmatn,sans-serif}
 <span class="badge">ویرایش ۲۰۲۶</span>
 </div>
 
-<a class="btn btn-primary" href="https://pay.padshahprompt.ir/link/776139" target="_blank" rel="noopener noreferrer nofollow" aria-label="خرید پک فروشگاه آنلاین">خرید و پرداخت امن</a>
+<a class="btn btn-primary js-auto-buy" href="#" data-product-id="store" role="button" aria-describedby="payment-status-store-top" aria-label="خرید پک فروشگاه آنلاین">خرید و پرداخت امن</a>
+<p id="payment-status-store-top" class="payment-status" role="status" aria-live="polite" hidden></p>
 <div class="secure-payment-note" role="note" aria-label="توضیحات پرداخت امن">
 <strong>🔒 پرداخت امن از طریق زرین‌پال</strong>
-<p>پس از ثبت مشخصات و انتخاب دکمه «پرداخت»، برای واردکردن اطلاعات کارت بانکی به درگاه رسمی شاپرک منتقل می‌شوید. اطلاعات کارت شما در سایت پادشاه پرامپت دریافت یا ذخیره نمی‌شود. پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود.</p>
+<p>پس از ثبت مشخصات و انتخاب دکمه «پرداخت»، برای واردکردن اطلاعات کارت بانکی به درگاه رسمی شاپرک منتقل می‌شوید. اطلاعات کارت شما در سایت پادشاه پرامپت دریافت یا ذخیره نمی‌شود. پس از تأیید پرداخت، لینک دانلود امن و زمان‌دار محصول بلافاصله نمایش داده می‌شود.</p>
 </div>
 </div>
 
@@ -183,7 +184,7 @@ body{font-family:Vazirmatn,sans-serif}
 <details><summary>آیا این محصول افزونه یا اتصال مستقیم به فروشگاه است؟</summary><p>خیر. این محصول مجموعه پرامپت و راهنمای استفاده است، نه افزونه یا نرم‌افزار متصل به فروشگاه. خروجی پرامپت‌ها باید توسط شما در فرایند واقعی فروشگاه اجرا و بررسی شود.</p></details>
 <details><summary>چه بخش‌هایی از فروشگاه را پوشش می‌دهد؟</summary><p>تحقیق بازار و مشتری، ارزیابی محصول، کاتالوگ و توضیحات محصول، قیمت‌گذاری و پیشنهاد فروش، تجربه خرید، بازاریابی، وفاداری، عملیات، موجودی، تحلیل و گردش‌کار از موضوعات اصلی بسته هستند.</p></details>
 <details><summary>آیا خروجی پرامپت‌ها باید قبل از انتشار بررسی شود؟</summary><p>بله. قیمت، موجودی، مشخصات محصول، ادعاهای فروش، قوانین و اطلاعات مشتری باید همیشه با داده واقعی فروشگاه تطبیق داده شوند.</p></details>
-<details><summary>فایل محصول چه زمانی تحویل می‌شود؟</summary><p>پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود.</p></details>
+<details><summary>فایل محصول چه زمانی تحویل می‌شود؟</summary><p>پس از تأیید پرداخت، لینک دانلود امن و زمان‌دار محصول بلافاصله نمایش داده می‌شود.</p></details>
 </section>
 </main>
 
@@ -191,11 +192,65 @@ body{font-family:Vazirmatn,sans-serif}
 <h2>قیمت و دریافت محصول</h2>
 <div class="price">۱۲۹٬۰۰۰ تومان</div>
 <p>شامل ۸۰ پرامپت فارسی، فایل راهنما، نسخه یکپارچه همه پرامپت‌ها، چک‌لیست کیفیت و مجوز استفاده است.</p>
-<p>پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود. لطفاً ایمیل خود را با دقت وارد کنید و پوشه Spam را نیز بررسی کنید.</p>
-<a class="btn btn-primary" href="https://pay.padshahprompt.ir/link/776139" target="_blank" rel="noopener noreferrer nofollow" aria-label="پرداخت امن برای پک فروشگاه آنلاین">خرید این پک</a>
+<p>پس از تأیید پرداخت، لینک دانلود امن و زمان‌دار محصول بلافاصله نمایش داده می‌شود.</p>
+<a class="btn btn-primary js-auto-buy" href="#" data-product-id="store" role="button" aria-describedby="payment-status-store-bottom" aria-label="پرداخت امن برای پک فروشگاه آنلاین">خرید این پک</a>
+<p id="payment-status-store-bottom" class="payment-status" role="status" aria-live="polite" hidden></p>
 </section>
 
 <footer class="site-footer"><div class="container">© ۱۴۰۵ پادشاه پرامپت | تمامی حقوق محفوظ است</div></footer>
 
+<script>
+(() => {
+  const buyButtons = document.querySelectorAll(".js-auto-buy");
+  if (!buyButtons.length) return;
+
+  buyButtons.forEach((buyButton) => {
+    const statusId = buyButton.getAttribute("aria-describedby");
+    const paymentStatus = statusId ? document.getElementById(statusId) : null;
+    if (!paymentStatus) return;
+
+    buyButton.addEventListener("click", async (event) => {
+      event.preventDefault();
+      if (buyButton.dataset.busy === "1") return;
+
+      const originalText = buyButton.textContent;
+      buyButton.dataset.busy = "1";
+      buyButton.setAttribute("aria-disabled", "true");
+      buyButton.textContent = "در حال اتصال به درگاه...";
+
+      paymentStatus.hidden = true;
+      paymentStatus.textContent = "";
+
+      try {
+        const response = await fetch("/payment/create", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            productId: buyButton.dataset.productId
+          })
+        });
+
+        const data = await response.json().catch(() => null);
+
+        if (!response.ok || !data || !data.ok || !data.paymentUrl) {
+          throw new Error(data?.error || "ایجاد درخواست پرداخت ناموفق بود.");
+        }
+
+        window.location.assign(data.paymentUrl);
+      } catch (error) {
+        paymentStatus.textContent =
+          error.message || "اتصال به درگاه انجام نشد. دوباره تلاش کنید.";
+        paymentStatus.hidden = false;
+
+        buyButton.dataset.busy = "0";
+        buyButton.removeAttribute("aria-disabled");
+        buyButton.textContent = originalText;
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
