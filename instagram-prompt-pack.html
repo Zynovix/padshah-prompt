@@ -144,7 +144,8 @@ body{font-family:Vazirmatn,sans-serif}
 <span class="badge">ویرایش ۲۰۲۶</span>
 </div>
 
-<a class="btn btn-primary" href="https://pay.padshahprompt.ir/link/776131" target="_blank" rel="noopener noreferrer nofollow" aria-label="خرید پک سلطان ریلز و اینستاگرام">خرید و پرداخت امن</a>
+<a class="btn btn-primary" href="#" id="buy-instagram-auto" role="button" aria-describedby="payment-status" aria-label="خرید پک سلطان ریلز و اینستاگرام">خرید و پرداخت امن</a>
+<p id="payment-status" role="status" aria-live="polite" hidden></p>
 <div class="secure-payment-note" role="note" aria-label="توضیحات پرداخت امن">
 <strong>🔒 پرداخت امن از طریق زرین‌پال</strong>
 <p>پس از ثبت مشخصات و انتخاب دکمه «پرداخت»، برای واردکردن اطلاعات کارت بانکی به درگاه رسمی شاپرک منتقل می‌شوید. اطلاعات کارت شما در سایت پادشاه پرامپت دریافت یا ذخیره نمی‌شود. پس از تأیید پرداخت، فایل محصول حداکثر تا ۲۴ ساعت به‌صورت دستی به ایمیل ثبت‌شده در فرم سفارش ارسال می‌شود.</p>
@@ -197,5 +198,58 @@ body{font-family:Vazirmatn,sans-serif}
 
 <footer class="site-footer"><div class="container">© ۱۴۰۵ پادشاه پرامپت | تمامی حقوق محفوظ است</div></footer>
 
+<script>
+(() => {
+  const buyButton = document.getElementById("buy-instagram-auto");
+  const paymentStatus = document.getElementById("payment-status");
+
+  if (!buyButton || !paymentStatus) return;
+
+  buyButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    if (buyButton.dataset.busy === "1") return;
+
+    const originalText = buyButton.textContent;
+    buyButton.dataset.busy = "1";
+    buyButton.setAttribute("aria-disabled", "true");
+    buyButton.textContent = "در حال اتصال به درگاه...";
+
+    paymentStatus.hidden = true;
+    paymentStatus.textContent = "";
+
+    try {
+      const response = await fetch(
+        "https://padshah-delivery-api.berozpc2017.workers.dev/payment/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            productId: "instagram"
+          })
+        }
+      );
+
+      const data = await response.json().catch(() => null);
+
+      if (!response.ok || !data || !data.ok || !data.paymentUrl) {
+        throw new Error(data?.error || "ایجاد درخواست پرداخت ناموفق بود.");
+      }
+
+      window.location.assign(data.paymentUrl);
+    } catch (error) {
+      paymentStatus.textContent =
+        error.message || "اتصال به درگاه انجام نشد. دوباره تلاش کنید.";
+      paymentStatus.hidden = false;
+
+      buyButton.dataset.busy = "0";
+      buyButton.removeAttribute("aria-disabled");
+      buyButton.textContent = originalText;
+    }
+  });
+})();
+</script>
 </body>
 </html>
