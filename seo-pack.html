@@ -120,6 +120,7 @@ body{font-family:Vazirmatn,sans-serif}
   ]
 }
 </script>
+  <script src="/assets/js/analytics.js" defer></script>
 </head>
 <body>
 
@@ -251,7 +252,8 @@ body{font-family:Vazirmatn,sans-serif}
           throw new Error(data?.error || "ایجاد درخواست پرداخت ناموفق بود.");
         }
 
-        window.location.assign(data.paymentUrl);
+        if (window.padshahAnalytics) window.padshahAnalytics.redirectToPayment("seo", data.paymentUrl);
+        else window.location.assign(data.paymentUrl);
       } catch (error) {
         paymentStatus.textContent =
           error.message || "اتصال به درگاه انجام نشد. دوباره تلاش کنید.";
