@@ -343,6 +343,35 @@ td {
   color: #C4D0E0;
 }
 
+.growth-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 18px;
+}
+
+.growth-actions .btn-secondary {
+  border: 1px solid rgba(134, 232, 255, .42);
+  color: #EAF8FF;
+  background: rgba(7, 24, 43, .72);
+}
+
+.growth-actions .btn-secondary:hover,
+.growth-actions .btn-secondary:focus-visible {
+  border-color: var(--primary);
+  color: var(--primary);
+  outline: none;
+}
+
+.growth-note {
+  display: block;
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -440,5 +469,14 @@ footer {
   .related,
   .article-cta {
     padding: 24px 21px;
+  }
+
+  .growth-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .growth-actions .btn {
+    width: 100%;
   }
 }
