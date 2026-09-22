@@ -96,6 +96,16 @@
 برای هر آزمون: فرضیه، یک متغیر، گروه‌ها، معیار اصلی، معیار محافظ و تصمیم بعدی را بنویس. هم‌زمان چند عامل را تغییر نده.</pre><div class="prompt-actions"><button class="copy-prompt"><i class="far fa-copy"></i> کپی پرامپت</button><span class="copy-status">آزمون را قابل اندازه‌گیری نگه دارید.</span></div></div>
       </section>
     </article>
+    <section class="content-share" data-content-share aria-labelledby="share-title">
+      <div class="content-share-head"><i class="fas fa-share-nodes" aria-hidden="true"></i><div><h2 id="share-title">این مجموعه برای چه کسی مفید است؟</h2><p>لینک را برای دوستی بفرستید که می‌تواند همین امروز از این پرامپت‌ها استفاده کند.</p></div></div>
+      <div class="share-actions">
+        <button class="share-action" type="button" data-native-share hidden><i class="fas fa-share-alt" aria-hidden="true"></i> اشتراک‌گذاری</button>
+        <a class="share-action telegram" href="#" data-share-telegram target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane" aria-hidden="true"></i> تلگرام</a>
+        <a class="share-action whatsapp" href="#" data-share-whatsapp target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> واتساپ</a>
+        <button class="share-action" type="button" data-copy-link><i class="far fa-copy" aria-hidden="true"></i> کپی لینک</button>
+      </div>
+      <p class="share-status" data-share-status role="status" aria-live="polite"></p>
+    </section>
     <section class="article-cta">
       <h2>پرامپت‌های بیشتری برای تولید محتوا می‌خواهید؟</h2>
       <p>بسته تولید محتوای متنی شامل الگوهای بیشتر برای مقاله، ایمیل، خبرنامه و متن سایت است.</p>
@@ -109,4 +119,5 @@
   </div></div></main>
   <footer><div class="container">© ۱۴۰۵ پادشاه پرامپت | تمامی حقوق محفوظ است</div></footer>
   <script>document.querySelectorAll('.copy-prompt').forEach(button=>button.addEventListener('click',async()=>{const box=button.closest('.prompt-box'),text=box.querySelector('.prompt-example').innerText,status=box.querySelector('.copy-status');try{await navigator.clipboard.writeText(text);status.textContent='پرامپت کپی شد.';button.innerHTML='<i class="fas fa-check"></i> کپی شد';setTimeout(()=>{button.innerHTML='<i class="far fa-copy"></i> کپی پرامپت';status.textContent='متغیرهای داخل کروشه را تکمیل کنید.'},2200)}catch{status.textContent='کپی خودکار ممکن نشد؛ متن را دستی انتخاب کنید.'}}));</script>
+  <script src="content-share.js" defer></script>
 </body></html>
