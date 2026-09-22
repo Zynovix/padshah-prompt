@@ -644,7 +644,16 @@
             </div>
           </section>
         </article>
-
+        <section class="content-share" data-content-share aria-labelledby="share-title">
+          <div class="content-share-head"><i class="fas fa-share-nodes" aria-hidden="true"></i><div><h2 id="share-title">این مجموعه برای چه کسی مفید است؟</h2><p>لینک را برای دوستی بفرستید که می‌تواند همین امروز از این پرامپت‌ها استفاده کند.</p></div></div>
+          <div class="share-actions">
+            <button class="share-action" type="button" data-native-share hidden><i class="fas fa-share-alt" aria-hidden="true"></i> اشتراک‌گذاری</button>
+            <a class="share-action telegram" href="#" data-share-telegram target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane" aria-hidden="true"></i> تلگرام</a>
+            <a class="share-action whatsapp" href="#" data-share-whatsapp target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> واتساپ</a>
+            <button class="share-action" type="button" data-copy-link><i class="far fa-copy" aria-hidden="true"></i> کپی لینک</button>
+          </div>
+          <p class="share-status" data-share-status role="status" aria-live="polite"></p>
+        </section>
         <section class="article-cta">
           <h2>به پرامپت‌های بیشتری برای اینستاگرام نیاز دارید؟</h2>
           <p>پک تخصصی اینستاگرام شامل ۱۰۰ پرامپت دسته‌بندی‌شده برای محتوا، ریلز، تعامل، فروش و برنامه‌ریزی است.</p>
@@ -699,5 +708,6 @@
       });
     });
   </script>
+  <script src="content-share.js" defer></script>
 </body>
 </html>
