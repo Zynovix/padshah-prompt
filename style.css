@@ -848,3 +848,93 @@ html, body { min-height: 100%; }
         transform: none;
     }
 }
+
+/* Compact free prompt library */
+.free-library-section {
+    padding-block: 82px;
+}
+.free-library-section .section-subtitle {
+    margin-bottom: 18px;
+}
+.free-library-trust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 18px;
+    color: #b9c9dc;
+    font-size: .86rem;
+    font-weight: 700;
+}
+.free-library-trust span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+.free-library-trust i {
+    color: #59f0c2;
+}
+.free-library-section .free-library-main-cta {
+    margin-block: 25px 28px;
+}
+.free-library-section .free-library-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+.free-library-section .free-library-card {
+    min-height: 190px;
+    padding: 22px 18px;
+}
+.free-library-section .free-library-card > i {
+    margin-bottom: 10px;
+    font-size: 1.85rem;
+}
+.free-library-section .free-library-card h3 {
+    margin: 0 0 5px;
+}
+.free-library-section .free-library-card p {
+    min-height: 36px;
+    margin: 0;
+    line-height: 1.7;
+}
+.free-library-section .free-library-card span {
+    margin-top: 11px;
+    padding-block: 9px;
+}
+@media (max-width: 760px) {
+    .free-library-section {
+        padding-block: 62px;
+    }
+    .free-library-section .free-library-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .free-library-section .free-library-card {
+        min-height: 176px;
+        padding: 18px 12px;
+        border-radius: 16px;
+    }
+    .free-library-section .free-library-card h3 {
+        font-size: .96rem;
+    }
+    .free-library-section .free-library-card p {
+        min-height: 33px;
+        font-size: .78rem;
+    }
+    .free-library-section .free-library-card span {
+        padding: 8px 5px;
+        font-size: .73rem;
+    }
+    .free-library-section .free-library-card:last-child {
+        grid-column: 1 / -1;
+        min-height: 164px;
+    }
+}
+@media (max-width: 420px) {
+    .free-library-trust {
+        gap: 8px 12px;
+        font-size: .76rem;
+    }
+    .free-library-section .free-library-card {
+        padding-inline: 9px;
+    }
+}
