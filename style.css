@@ -553,3 +553,157 @@ html, body { min-height: 100%; }
 .challenge-frame{overflow:hidden;margin:0;border:1px solid rgba(107,209,255,.4);border-radius:19px;background:#07111d;box-shadow:0 15px 48px rgba(0,0,0,.4)}.challenge-frame>a{display:block;position:relative;overflow:hidden}.challenge-frame img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;transition:transform .35s ease}.challenge-frame a:hover img,.challenge-frame a:focus-visible img{transform:scale(1.025)}.challenge-zoom{position:absolute;inset:auto auto 16px 16px;padding:9px 14px;border-radius:10px;background:rgba(3,14,27,.89);color:#fff;font-size:.86rem;font-weight:800;border:1px solid rgba(255,255,255,.25)}.challenge-frame figcaption{display:flex;justify-content:space-between;gap:14px;padding:15px 21px;color:#dceafb;font-size:.9rem;font-weight:700}.challenge-frame figcaption span:last-child{color:#75e6fc}.challenge-context{text-align:center;color:#b9cadd;font-size:.86rem;line-height:1.9;margin:19px auto}.challenge-cta{display:table;margin:16px auto 0;text-align:center}
 @media(max-width:650px){.challenge-showcase{padding:15px;border-radius:19px}.challenge-frame{border-radius:12px}.challenge-zoom{bottom:8px;left:8px;font-size:.72rem;padding:6px 9px}.challenge-frame figcaption{padding:11px 12px;font-size:.77rem;flex-wrap:wrap}.challenge-intro h2{font-size:1.4rem}}
 @media(prefers-reduced-motion:reduce){.challenge-frame img{transition:none}}
+
+/* Compact, conversion-focused homepage header and hero */
+.navbar {
+    padding: 14px 0;
+}
+.nav-wrapper {
+    position: relative;
+}
+.icon-btn svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+.hero {
+    min-height: min(78svh, 760px);
+    padding: clamp(105px, 12vh, 138px) 0 clamp(64px, 8vh, 88px);
+}
+.hero-content {
+    max-width: 980px;
+}
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    padding: 7px 14px;
+    border: 1px solid rgba(112,203,255,.2);
+    border-radius: 999px;
+    background: rgba(69,215,255,.07);
+    color: #8cecff;
+    font-size: .88rem;
+    font-weight: 800;
+}
+.hero h1 {
+    font-size: clamp(2.65rem, 4.8vw, 4.8rem);
+    max-width: 940px;
+    margin-inline: auto;
+}
+.hero-description {
+    margin-bottom: 30px;
+}
+.hero-academy-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+    color: #b9c8dc;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+}
+.hero-academy-link:hover,
+.hero-academy-link:focus-visible {
+    color: #7de8ff;
+    transform: translateX(-3px);
+}
+
+@media (max-width: 1100px) {
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 11px);
+        right: 0;
+        left: 0;
+        display: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+        padding: 12px;
+        border: 1px solid rgba(112,203,255,.18);
+        border-radius: 16px;
+        background: rgba(5,18,33,.98);
+        box-shadow: 0 20px 55px rgba(0,0,0,.42);
+    }
+    .nav-links.is-open {
+        display: grid;
+    }
+    .nav-links a {
+        padding: 10px 12px;
+        border-radius: 9px;
+        text-align: center;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+        background: rgba(69,215,255,.08);
+    }
+    .mobile-menu-toggle {
+        display: grid;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    .navbar .container {
+        padding-inline: 14px;
+    }
+    .logo {
+        font-size: 1.18rem;
+        gap: 7px;
+        white-space: nowrap;
+    }
+    .brand-logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    .nav-actions {
+        gap: 7px;
+    }
+    .nav-actions .icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .nav-actions .nav-support,
+    .nav-actions .nav-guide {
+        display: none;
+    }
+    .nav-actions .icon-btn.nav-search,
+    .mobile-menu-toggle {
+        display: grid;
+    }
+    .hero {
+        min-height: auto;
+        padding: 72px 0 64px;
+    }
+    .hero h1 {
+        font-size: clamp(2rem, 9vw, 2.75rem);
+        line-height: 1.42;
+        margin-bottom: 18px;
+    }
+    .hero-eyebrow {
+        font-size: .78rem;
+        margin-bottom: 14px;
+    }
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 26px;
+    }
+    .hero-buttons {
+        gap: 10px;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 13px 18px;
+    }
+}

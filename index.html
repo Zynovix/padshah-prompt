@@ -70,7 +70,7 @@
                     <img class="brand-logo-img" src="logo-160.webp" alt="لوگوی پادشاه پرامپت" width="48" height="48">
                     پادشاه پرامپت
                 </a>
-                <div class="nav-links">
+                <div class="nav-links" id="primaryNavigation">
                     <a href="#home">خانه</a>
                     <a href="#products">محصولات</a>
                     <a href="ai-tools.html">ابزارهای رایگان</a>
@@ -80,9 +80,18 @@
                     <a href="contact.html">تماس</a>
                 </div>
                 <div class="nav-actions">
-                    <a class="icon-btn" href="#productSearch" aria-label="جست‌وجوی محصولات"><i class="fas fa-search"></i></a>
-                    <a class="icon-btn" href="contact.html" aria-label="پشتیبانی و تماس"><i class="fas fa-headset"></i></a>
-                    <a class="icon-btn" href="purchase-guide.html" aria-label="راهنمای خرید"><i class="fas fa-circle-info"></i></a>
+                    <a class="icon-btn nav-search" href="#productSearch" aria-label="جست‌وجوی محصولات">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+                    </a>
+                    <a class="icon-btn nav-support" href="contact.html" aria-label="پشتیبانی و تماس">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"></path><path d="M4 14a2 2 0 0 1 2-2h1v6H6a2 2 0 0 1-2-2zM20 14a2 2 0 0 0-2-2h-1v6h1a2 2 0 0 0 2-2zM17 18c0 1.1-1.8 2-4 2"></path></svg>
+                    </a>
+                    <a class="icon-btn nav-guide" href="purchase-guide.html" aria-label="راهنمای خرید">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.5"></path></svg>
+                    </a>
+                    <button class="icon-btn mobile-menu-toggle" type="button" aria-label="باز کردن منوی اصلی" aria-controls="primaryNavigation" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+                    </button>
                     <a href="#products" class="btn-nav">مشاهده فروشگاه</a>
                 </div>
             </div>
@@ -93,15 +102,16 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>جایی که <span class="highlight">پرامپت‌ها فرمانروایی می‌کنند</span></h1>
+                <span class="hero-eyebrow">جایی که پرامپت‌ها فرمانروایی می‌کنند</span>
+                <h1>با پرامپت‌های حرفه‌ای، <span class="highlight">سریع‌تر محتوا بسازید و رشد کنید</span></h1>
                 <p class="hero-description">
                     ۵۸۰ پرامپت ساختاریافته برای تولید محتوا، فروش و رشد کسب‌وکار
                 </p>
                 <div class="hero-buttons">
                     <a href="#products" class="btn btn-primary">مشاهده بسته‌ها</a>
                     <a href="free-prompts.html" class="btn btn-outline">۱۸۰ پرامپت رایگان</a>
-                    <a href="ai-academy.html" class="btn btn-outline">آکادمی رایگان</a>
                 </div>
+                <a class="hero-academy-link" href="ai-academy.html">ورود به آکادمی رایگان <span aria-hidden="true">←</span></a>
             </div>
         </div>
     </section>
@@ -864,6 +874,23 @@
                     }
                 }
             });
+        });
+
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const primaryNavigation = document.getElementById('primaryNavigation');
+        const closeMobileMenu = () => {
+            primaryNavigation?.classList.remove('is-open');
+            mobileMenuToggle?.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle?.setAttribute('aria-label', 'باز کردن منوی اصلی');
+        };
+        mobileMenuToggle?.addEventListener('click', () => {
+            const isOpen = primaryNavigation?.classList.toggle('is-open');
+            mobileMenuToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+            mobileMenuToggle.setAttribute('aria-label', isOpen ? 'بستن منوی اصلی' : 'باز کردن منوی اصلی');
+        });
+        primaryNavigation?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeMobileMenu();
         });
     </script>
 
