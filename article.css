@@ -33,6 +33,12 @@ body {
   background-image:
     linear-gradient(180deg, rgba(2, 10, 20, .22), rgba(2, 10, 20, .48)),
     url('site-background.png');
+  background-image:
+    linear-gradient(180deg, rgba(2, 10, 20, .22), rgba(2, 10, 20, .48)),
+    image-set(
+      url('site-background.webp') type('image/webp'),
+      url('site-background.png') type('image/png')
+    );
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -484,6 +490,12 @@ footer {
   body {
     background-attachment: scroll;
     background-size: auto 100vh;
+  }
+
+  .navbar,
+  footer {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .container {
