@@ -707,3 +707,41 @@ html, body { min-height: 100%; }
         padding: 13px 18px;
     }
 }
+
+/* Free tool section refinements */
+.tools-home-section {
+    padding-bottom: 45px;
+}
+.tools-home-section + .section {
+    padding-top: 65px;
+}
+.tools-home-microcopy {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 14px 0 0;
+    color: #94a8c2;
+    font-size: .82rem;
+    font-weight: 600;
+}
+.tools-home-microcopy i {
+    color: #59f0c2;
+}
+@media (max-width: 850px) {
+    .tools-home-microcopy {
+        justify-content: center;
+    }
+}
+@media (max-width: 650px) {
+    .tools-home-section {
+        padding-bottom: 32px;
+    }
+    .tools-home-section + .section {
+        padding-top: 48px;
+    }
+    .tools-home-microcopy {
+        max-width: 290px;
+        margin-inline: auto;
+        line-height: 1.8;
+    }
+}
