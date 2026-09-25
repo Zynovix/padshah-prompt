@@ -39,6 +39,10 @@ a{display:inline-block;margin-top:15px;padding:12px 20px;border-radius:12px;back
     isolation: isolate;
     background-color: #04101d !important;
     background-image: url('site-background.png') !important;
+    background-image: image-set(
+      url('site-background.webp') type('image/webp'),
+      url('site-background.png') type('image/png')
+    ) !important;
     background-repeat: no-repeat !important;
     background-position: center top !important;
     background-size: cover !important;
@@ -78,6 +82,10 @@ a{display:inline-block;margin-top:15px;padding:12px 20px;border-radius:12px;back
   }
   @media (max-width: 900px) {
     body { background-attachment: scroll !important; background-size: auto 100vh !important; }
+    .navbar, nav.navbar, footer, .footer {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
   }
 </style>
 
